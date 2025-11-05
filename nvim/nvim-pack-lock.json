@@ -1,0 +1,53 @@
+{
+  "plugins": {
+    "Alduin": {
+      "rev": "6575a0f",
+      "src": "https://github.com/AlessandroYorba/Alduin"
+    },
+    "LuaSnip": {
+      "rev": "4585605",
+      "src": "https://github.com/L3MON4D3/LuaSnip",
+      "version": "'v2.4.0'"
+    },
+    "bufferline.nvim": {
+      "rev": "655133c",
+      "src": "https://github.com/akinsho/bufferline.nvim"
+    },
+    "friendly-snippets": {
+      "rev": "572f566",
+      "src": "https://github.com/rafamadriz/friendly-snippets"
+    },
+    "fzf": {
+      "rev": "5cb6957",
+      "src": "https://github.com/junegunn/fzf"
+    },
+    "fzf.vim": {
+      "rev": "879db51",
+      "src": "https://github.com/junegunn/fzf.vim"
+    },
+    "gruvbox.nvim": {
+      "rev": "5e0a460",
+      "src": "https://github.com/ellisonleao/gruvbox.nvim"
+    },
+    "jellybeans.nvim": {
+      "rev": "28b8088",
+      "src": "https://github.com/WTFox/jellybeans.nvim"
+    },
+    "nvim": {
+      "rev": "8c4125e",
+      "src": "https://github.com/catppuccin/nvim"
+    },
+    "onedark.nvim": {
+      "rev": "de495fa",
+      "src": "https://github.com/navarasu/onedark.nvim"
+    },
+    "tokyonight.nvim": {
+      "rev": "2642dbb",
+      "src": "https://github.com/folke/tokyonight.nvim"
+    },
+    "vague.nvim": {
+      "rev": "5689afd",
+      "src": "https://github.com/vague-theme/vague.nvim"
+    }
+  }
+}

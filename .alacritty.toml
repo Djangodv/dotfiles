@@ -1,0 +1,51 @@
+[font]
+size = 12.0
+
+[[keyboard.bindings]]
+key = "Backspace"
+mods = "Control"
+chars = "\u0017" # instead of \x17 or \u{17}
+
+
+# [font.normal]
+# family = "JetBrains Mono Nerd Font"
+# style = "Regular"
+
+# [font.bold]
+# family = "JetBrains Mono Nerd Font"
+# style = "Bold"
+
+# [font.italic]
+# family = "JetBrains Mono Nerd Font"
+# style = "Italic"
+
+# [font.bold_italic]
+# family = "JetBrains Mono Nerd Font"
+# style = "Bold Italic"
+
+## Colors (Srcery)
+#[colors]
+#primary.background = '#1C1B19'
+#primary.foreground = '#D9D9D9'
+#
+## Normal colors
+#[colors.normal]
+#black   = '#121212'
+#red     = '#F4005F'
+#green   = '#98E024'
+#yellow  = '#E0D561'
+#blue    = '#48A9A6'
+#magenta = '#C72C6F'
+#cyan    = '#79E8DE'
+#white   = '#D9D9D9'
+#
+## Bright colors
+#[colors.bright]
+#black   = '#424242'
+#red     = '#F4005F'
+#green   = '#98E024'
+#yellow  = '#E0D561'
+#blue    = '#48A9A6'
+#magenta = '#C72C6F'
+#cyan    = '#79E8DE'
+#white   = '#FFFFFF'
