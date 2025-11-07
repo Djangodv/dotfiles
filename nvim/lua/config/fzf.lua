@@ -4,7 +4,7 @@
 -- .git/** matches both
 vim.opt.wildignore = { ".git/**", "**/build/**", "**/.cache/**", "**/venv/**", "**/managed_components/**" }
 -- NOTE: Directories will be searched with '/*' after them, due to limitations of globpath()
-vim.opt.path = { "/home/user/Github/", "/home/user/Github/dotfiles/", "/home/user/Github/dotfiles/nvim/", "/home/user/Github/dotfiles/nvim/lua/config" }
+vim.opt.path = { "/home/user/Github/", "/home/user/Github/dotfiles/", "/home/user/Github/dotfiles/nvim/", "/home/user/Github/dotfiles/nvim/lua/config", "/home/user/Github/dotfiles/nvim/snippets/after/ftplugin" }
 
 local filescache = {}
 
@@ -24,8 +24,6 @@ function Find(args, cmdcomplete)
     for i = 1, #path_files do
       table.insert(filescache, path_files[i])
     end
-
-    print(vim.inspect(filescache))
 
     -- When you call a vim function from Lua, neovim automatically converts vimscript lists to Lua tables
     -- Set path relative to cwd (redundant in combination w. au for setting cwd)

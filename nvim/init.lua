@@ -1,5 +1,8 @@
 -- Desc
 
+-- Add snippets/after/ftplugin to path
+vim.opt.rtp:append({'/home/user/.config/nvim/snippets/after'})
+
 -- TODO: Test
 -- Add snippets folder (after/ftplugin) to runtimepath to auto-load snippets
 vim.opt.rtp:append(vim.fn.stdpath("config") .. "/snippets")
@@ -70,6 +73,7 @@ vim.cmd.colorscheme("gruvbox")
 require('config.lsp')
 require('config.workspace')
 require('config.fzf')
+require('config.plugins')
 -- require('config.copilot')
 
 -- require('config.snippets')

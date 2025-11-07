@@ -1,6 +1,6 @@
 -- Description
 
-vim.lsp.enable({ 'clangd', 'pyright', 'lua_ls' })
+-- vim.lsp.enable({ 'clangd', 'pyright', 'lua_ls' })
 
 -- Works best with completeopt=noselect.
 -- Don't pre-select menu items, use popup to display extra information and use the menu also when there is only one mathc
