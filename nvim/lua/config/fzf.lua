@@ -30,6 +30,9 @@ function Find(args, cmdcomplete)
     -- local filescache = vim.tbl_map(function(path) 
     --   return vim.fn.fnamemodify(path, ':.')
     -- end, filescache)
+    
+    -- print(vim.inspect(filescache))
+
   end
   return args == '' and filescache or vim.fn.matchfuzzy(filescache, args)
 end
