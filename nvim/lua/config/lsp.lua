@@ -55,9 +55,9 @@ vim.diagnostic.config({
 	-- Use a curly line
 	undercurl = true,
 	-- Always show diagnostic info
-	virtual_text = true,
+	-- virtual_text = true,
 	-- Show diagnostics info only when cursor in on the line
-	-- virtual_text = { current_line = true },
+	virtual_text = { current_line = true },
 	signs = {
 		text = {
 			[vim.diagnostic.severity.ERROR] = '',
@@ -73,8 +73,19 @@ vim.api.nvim_set_hl(0, "DiagnosticWarn", { fg = "#f4be74" })
 vim.api.nvim_set_hl(0, "DiagnosticInfo", { fg = "#87875f" })
 vim.api.nvim_set_hl(0, "DiagnosticHint", { fg = "#87875f" })
 
+-- Make diagnostic sign colors match underline/foreground colors
+vim.api.nvim_set_hl(0, "DiagnosticSignError", { fg = "#aa4844", bg = "NONE" })
+vim.api.nvim_set_hl(0, "DiagnosticSignWarn",  { fg = "#f4be74", bg = "NONE" })
+vim.api.nvim_set_hl(0, "DiagnosticSignInfo",  { fg = "#87875f", bg = "NONE" })
+vim.api.nvim_set_hl(0, "DiagnosticSignHint",  { fg = "#87875f", bg = "NONE" })
+
 -- Undercurl colors
-vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = true, sp = "#fb4934" })
-vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { undercurl = true, sp = "#fabd2f" })
-vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", { undercurl = true, sp = "#83a598" })
-vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { undercurl = true, sp = "#b8bb26" })
+-- vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = true, sp = "#fb4934" })
+-- vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { undercurl = true, sp = "#fabd2f" })
+-- vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", { undercurl = true, sp = "#83a598" })
+-- vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { undercurl = true, sp = "#b8bb26" })
+
+vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = true, sp = "#aa4844" })
+vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", { undercurl = true, sp = "#f4be74" })
+vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", { undercurl = true, sp = "#87875f" })
+vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", { undercurl = true, sp = "#87875f" })

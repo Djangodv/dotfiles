@@ -1,11 +1,16 @@
 [font]
-size = 14.0
+size = 12.0
 
 [[keyboard.bindings]]
 key = "Backspace"
 mods = "Control"
 chars = "\u0017" # instead of \x17 or \u{17}
 
+[general]
+import = [
+	# NOTE: add themes to configure.sh
+	"~/alacritty-theme/themes/kanagawa_dragon.toml"
+]
 
 # [font.normal]
 # family = "JetBrains Mono Nerd Font"

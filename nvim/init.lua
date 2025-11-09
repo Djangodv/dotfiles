@@ -45,18 +45,8 @@ vim.keymap.set('n', '<localleader>j', '<s-}>')
 
 
 vim.pack.add({
-	'https://github.com/vague-theme/vague.nvim',
-	'https://github.com/WTFox/jellybeans.nvim',
-	'https://github.com/ellisonleao/gruvbox.nvim',
-	'https://github.com/catppuccin/nvim',
-	'https://github.com/folke/tokyonight.nvim',
-	'https://github.com/navarasu/onedark.nvim',
+	'https://github.com/rebelot/kanagawa.nvim',
 })
-
-require('onedark').setup {
-	style = 'warmer'
-}
-
 
 -- Fix error, regarding treesitter highlighting when opening a help file
 vim.api.nvim_create_autocmd("FileType", {
@@ -68,7 +58,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 
-vim.cmd.colorscheme("gruvbox")
+vim.cmd.colorscheme("kanagawa-dragon")
 
 require('config.lsp')
 require('config.workspace')
