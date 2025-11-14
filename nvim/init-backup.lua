@@ -54,7 +54,6 @@ vim.keymap.set('n', '<localleader>l', ':luafile ~/.config/nvim/init.lua<cr>')
 vim.keymap.set('n', '<s-q>', ':wqall!<cr>')
 
 vim.opt.termguicolors = true
-require("bufferline").setup{}
 
 -- Set up a key mapping for FZF with 'ls' as the source
 -- vim.keymap.set('n', '<localleader>fn', function() 

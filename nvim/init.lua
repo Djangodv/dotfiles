@@ -45,7 +45,19 @@ vim.keymap.set('n', '<localleader>j', '<s-}>')
 
 
 vim.pack.add({
-	'https://github.com/rebelot/kanagawa.nvim',
+	'https://github.com/folke/tokyonight.nvim',
+	'https://github.com/kepano/flexoki-neovim',
+	'https://github.com/nyoom-engineering/oxocarbon.nvim',
+	'https://github.com/jacoborus/tender.vim',
+	'https://github.com/bluz71/vim-moonfly-colors',
+	'https://github.com/zenbones-theme/zenbones.nvim',
+	'https://github.com/olimorris/onedarkpro.nvim',
+	'https://github.com/savq/melange-nvim',
+	'https://github.com/rmehri01/onenord.nvim',
+	'https://github.com/navarasu/onedark.nvim',
+	-- 'https://github.com/RRethy/base16-nvim',
+	'https://github.com/chriskempson/base16-vim'
+
 })
 
 -- Fix error, regarding treesitter highlighting when opening a help file
@@ -57,13 +69,10 @@ vim.api.nvim_create_autocmd("FileType", {
 	end,
 })
 
-
-vim.cmd.colorscheme("kanagawa-dragon")
-
-require('config.lsp')
 require('config.workspace')
 require('config.fzf')
 require('config.plugins')
 require('config.snippets')
 require('config.mappings')
 require('config.options')
+require('config.lsp')
