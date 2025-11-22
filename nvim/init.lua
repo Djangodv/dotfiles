@@ -62,7 +62,7 @@ vim.pack.add({
 
 -- Fix error, regarding treesitter highlighting when opening a help file
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = "help",
+	pattern = {"help"},
 	-- pattern = "*",
 	callback = function()
 		vim.treesitter.stop()

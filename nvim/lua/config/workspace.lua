@@ -18,31 +18,31 @@ vim.opt.wildoptions = { "fuzzy" }
 vim.api.nvim_create_autocmd({'BufEnter', 'LspAttach'}, {
   callback = function()
 
+    -- Check for help files
+    local buffer = vim.api.nvim_get_current_buf()
+    if vim.api.nvim_buf_get_option(buffer, 'filetype') == 'help' or 'cmd' then
+      -- Return skips the rest of the function
+      return
+    end
+
     local clients = vim.lsp.get_clients({ bufnr = 0 })
     local file_dir = vim.fn.expand("%:p:h")
     local result = vim.system({'git', 'rev-parse', '--show-toplevel'}, { text = true, cwd = file_dir }):wait()
     local git_root = result.stdout:gsub("\n", "")
     local cwd = vim.fn.getcwd(0)
-
-    -- Check for help files
-    local buffer = vim.api.nvim_get_current_buf()
-    if vim.api.nvim_buf_get_option(buffer, 'filetype') == 'help' then
-      -- Return skips the rest of the function
-      return
-    end
   
     -- Schedules {fn} to be invoked soon by the main event-loop. 
     -- Makes the change in cwd detectable by other autocommand, e.g. DirChanged to empty filescache
     vim.schedule(function() 
       if git_root ~= "" and git_root ~= cwd then
-          vim.cmd("lcd " .. git_root)
+          vim.cmd("silent! lcd " .. git_root)
       elseif clients ~= nil and #clients > 0 then
           local lsp_root = clients[1].config.root_dir
           if lsp_root and lsp_root ~= cwd then
-            vim.cmd("lcd " .. lsp_root)
+            vim.cmd("silent! lcd " .. lsp_root)
           end
       elseif file_dir ~= cwd then
-          vim.cmd("lcd " .. file_dir)
+          vim.cmd("silent! lcd " .. file_dir)
       end
     end )
 

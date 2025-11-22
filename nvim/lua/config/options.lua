@@ -8,3 +8,8 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- vim.api.nvim_set_hl(0, 'LineNr', { bg = "#181818", fg = "#625e5a" })
 -- vim.api.nvim_set_hl(0, 'SignColumn', { bg = "#181818" })
+
+-- Fix indentation 
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+
